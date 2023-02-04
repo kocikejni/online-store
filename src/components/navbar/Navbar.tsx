@@ -19,6 +19,7 @@ import { useShoppingCart } from "../../context/ShoppingCartContext";
 import storeItems from "../../data/items.json";
 import SingleStoreItem from "../storeItem/SingleStoreItem";
 import { Grid } from "@mui/material";
+import { ShoppingCart } from "../shoppingCart/ShoppingCart";
 
 const Navbar = () => {
   const { cartQuantity } = useShoppingCart();
@@ -189,7 +190,7 @@ const Navbar = () => {
               open={Boolean(storeMenu)}
               onClose={handleCloseStoreMenu}
             >
-              
+              <ShoppingCart />
             </Menu>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
